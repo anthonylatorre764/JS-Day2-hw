@@ -1,4 +1,4 @@
-console.log('testing')
+console.log('testing1')
 
 //========== Exercise #1 ===========//
 /*
@@ -20,16 +20,25 @@ let person3 = {
     }]
 }
 
+console.log(person3['shakes'][0]['oberwise'])
+
+
 
 function show_fav_foods(fav_foods){
-    for(let key in fav_foods){
-        console.log(fav_foods[key])
+    for (let key in fav_foods){
+        if ((typeof fav_foods[key]) === "object" ) {
+            for (let food of fav_foods[key]) {
+                console.log(food)
+            }
+        }
+        else {
+            console.log(fav_foods[key])
+        }
     }
 }
 
 
 show_fav_foods(person3)
-
 
 //======= Exercise #2=========//
 /*
@@ -125,18 +134,45 @@ ergastData()
 
 // codewars
 
-// Probem #1 - Returning Strings
-// https://www.codewars.com/kata/55a70521798b14d4750000a4
+// Probem #1 - Testing 1-2-3
+// https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9
 
-// Solution (may need to scroll down)
-// https://www.codewars.com/users/soccer_fiend_12/completed_solutions
+// Solution:
+
+// var number=function(array){
+//     let newArray = []
+    
+//     for (let i = 0; i < array.length; i++) {
+//       newArray.push((i+1) + ": " + array[i])
+//     }
+    
+//     return newArray
+//   }
 
 
 
-// Problem #2 -
+
+
+
+// Problem #2 - Total amount of points
 // https://www.codewars.com/kata/5bb904724c47249b10000131
 
-// Solution
-// https://www.codewars.com/users/soccer_fiend_12/completed_solutions
+// Solution:
+
+// function points(games) {
+//     let total_pts = 0
+    
+//     for(let game of games){
+//       console.log('game')
+//       if (game[0] > game[2]){
+//         total_pts += 3
+//       }
+//       else if (game[0] == game[2]){
+//         total_pts += 1
+//       }
+//     }
+//     return total_pts
+//   }
+
 
 
